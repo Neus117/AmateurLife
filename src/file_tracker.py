@@ -45,7 +45,7 @@ class MainWindow(QMainWindow):
 
         # 设置窗口标题和图标
         self.setWindowTitle("快速访问")
-        self.setWindowIcon(QIcon(resource_path("./images/shell32_star.ico")))  # 打包准备
+        self.setWindowIcon(QIcon(resource_path("images/shell32_star.ico")))  # 打包准备
         self.setGeometry(100, 100, 900, 500)
 
         # 创建主布局
@@ -87,7 +87,7 @@ class MainWindow(QMainWindow):
 
         # 置顶开关按钮
         self.top_button = QPushButton(self)
-        self.top_button.setIcon(QIcon(resource_path("./images/pin_grey.png")))  # 打包准备
+        self.top_button.setIcon(QIcon(resource_path("images/pin_grey.png")))  # 打包准备
         self.top_button.setFixedHeight(32)  # 设置固定高度
         self.top_button.clicked.connect(self.toggle_topmost)
 
@@ -110,10 +110,10 @@ class MainWindow(QMainWindow):
         # 切换窗口的置顶状态
         if self.windowFlags() & Qt.WindowStaysOnTopHint:
             self.setWindowFlags(self.windowFlags() & ~Qt.WindowStaysOnTopHint)
-            self.top_button.setIcon(QIcon(resource_path("./images/pin_grey.png")))  # 置顶关，打包准备
+            self.top_button.setIcon(QIcon(resource_path("images/pin_grey.png")))  # 置顶关，打包准备
         else:
             self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
-            self.top_button.setIcon(QIcon(resource_path("./images/pin_red.png")))  # 置顶开，打包准备
+            self.top_button.setIcon(QIcon(resource_path("images/pin_red.png")))  # 置顶开，打包准备
         self.show()  # 刷新窗口，应用置顶状态
 
     def browse_and_record_folder(self):
