@@ -57,5 +57,3 @@
 - 这个工具目前最大的缺点是，用户只能主动通过它提供的导航方式实现路径记录，并没有与 Windows 资源管理器实现良好的融合。用户目前只能改变一些使用习惯，比如将它设置随系统自启动，然后尝试将它作为最主要的文件导航方式使用。 | The biggest drawback of this tool is that it currently relies on users actively navigating through its interface to record paths, as it isn't seamlessly integrated with Windows File Explorer. Users will need to adjust their habits, perhaps setting the tool to launch on system startup and using it as their primary method for file navigation.
 
 - 在 Windows 系统中添加自启动任务的方法：WIN+R 打开运行，然后输入命令 shell:startup 回车。之后将需要添加自启动任务的程序快捷方式放入弹出的窗口即可。 | How to add a startup task in Windows: Press WIN+R to open the Run dialog, then enter the command shell:startup and press Enter. Next, place the shortcut of the program you want to add to startup in the window that pops up.
-
-- 这个工具的所有脚本代码都是我请教 ChatGPT 和 GitHub Copilot 写的，我根本不懂代码。 | All the script code for this tool was written by ChatGPT and GitHub Copilot, as I don't really understand coding myself.
