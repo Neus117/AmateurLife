@@ -5,7 +5,7 @@ import time
 import subprocess
 import warnings
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QListWidget, QVBoxLayout, QWidget, QComboBox, \
-    QFileDialog, QHBoxLayout, QSizePolicy, QMessageBox, QMenu, QAction, QDialog, QLabel
+    QFileDialog, QHBoxLayout, QSizePolicy, QMessageBox, QMenu, QAction, QDialog, QLabel, QWhatsThis
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QIcon, QFont
 
@@ -37,6 +37,14 @@ CREATE TABLE IF NOT EXISTS paths (
 )
 ''')
 conn.commit()
+
+class CustomFileDialog(QFileDialog):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.setOption(QFileDialog.DontUseNativeDialog, True)
+        self.setWindowFlags(self.windowFlags() & ~Qt.WindowContextHelpButtonHint)  # 移除 "?" 按钮
+        self.setFileMode(QFileDialog.Directory)
+        self.setOption(QFileDialog.ShowDirsOnly, False)
 
 # PyQt主窗口类
 class MainWindow(QMainWindow):
@@ -117,9 +125,15 @@ class MainWindow(QMainWindow):
         self.show()  # 刷新窗口，应用置顶状态
 
     def browse_and_record_folder(self):
-        # 打开文件夹选择对话框
-        folder_selected = QFileDialog.getExistingDirectory(self, "选择文件夹")
-        if folder_selected:
+        file_dialog = CustomFileDialog(self)
+        file_dialog.setWindowTitle("选择文件夹或文件")
+        
+        if file_dialog.exec_() == QFileDialog.Accepted:
+            selected = file_dialog.selectedFiles()[0]
+            if os.path.isfile(selected):
+                folder_selected = os.path.dirname(selected)
+            else:
+                folder_selected = selected
             folder_selected = os.path.normpath(folder_selected)  # 规范化路径
             self.record_accessed_path(folder_selected)
             self.update_folder_list()
