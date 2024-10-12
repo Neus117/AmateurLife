@@ -5,7 +5,7 @@ import time
 import subprocess
 import warnings
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QListWidget, QVBoxLayout, QWidget, QComboBox, \
-    QFileDialog, QHBoxLayout, QSizePolicy, QMessageBox, QMenu, QAction, QDialog, QLabel, QWhatsThis
+    QFileDialog, QHBoxLayout, QSizePolicy, QMessageBox, QMenu, QAction, QDialog, QLabel, QWhatsThis, QDialogButtonBox
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QIcon, QFont
 
@@ -45,6 +45,30 @@ class CustomFileDialog(QFileDialog):
         self.setWindowFlags(self.windowFlags() & ~Qt.WindowContextHelpButtonHint)  # 移除 "?" 按钮
         self.setFileMode(QFileDialog.Directory)
         self.setOption(QFileDialog.ShowDirsOnly, False)
+
+        # 创建一个新的按钮来选择当前文件夹
+        self.selectFolderBtn = QPushButton("选择当前文件夹", self)
+        self.selectFolderBtn.clicked.connect(self.selectCurrentFolder)
+
+        # 获取对话框的布局
+        layout = self.layout()
+
+        # 找到并移除 "Choose" 按钮
+        buttonBox = self.findChild(QDialogButtonBox)
+        if buttonBox:
+            chooseButton = buttonBox.button(QDialogButtonBox.Open)
+            if chooseButton:
+                buttonBox.removeButton(chooseButton)
+
+        # 创建一个新的水平布局来容纳新的按钮
+        btnLayout = QHBoxLayout()
+        btnLayout.addWidget(self.selectFolderBtn)
+
+        # 将新的布局添加到主布局中
+        layout.addLayout(btnLayout, layout.rowCount(), 0, 1, layout.columnCount())
+
+    def selectCurrentFolder(self):
+        self.done(QFileDialog.Accepted)
 
 # PyQt主窗口类
 class MainWindow(QMainWindow):
@@ -101,11 +125,10 @@ class MainWindow(QMainWindow):
 
         # 底部布局
         self.bottom_layout = QHBoxLayout()
-        self.bottom_layout.addStretch()
+        self.bottom_layout.addWidget(self.clear_button)  # 清空按钮
         self.bottom_layout.addStretch()
         self.bottom_layout.addWidget(self.open_button)  # 打开按钮
         self.bottom_layout.addStretch()
-        self.bottom_layout.addWidget(self.clear_button)  # 清空按钮
         self.bottom_layout.addWidget(self.sort_option)  # 排序选择框
         self.bottom_layout.addWidget(self.top_button)  # 置顶开关
         self.layout.addLayout(self.bottom_layout)

@@ -49,9 +49,7 @@
 ## 开发者贡献 | Developer Contributions
 - 欢迎提交 issue 或 pull request！ | You are welcome to submit issues or pull requests!
 
-- 但是我不一定会看，即使看到了也很大可能没有能力解决，毕竟我是初学者中的菜鸟。 | However, I might not be able to review or resolve them, as I'm just a beginner and likely won't have the skills to fix any major problems.
-
-- 最好有经验丰富的开发者继续开发和完善此工具，比如让它能够直接监控 Windows 资源管理器的导航行为，无需在其界面主动导航而是后台运行持续提供记录服务。还可以增加一个小的悬浮窗，是否开启交由用户选择，鼠标悬停在浮窗上时展开主窗口呈现路径记录供用户选择。 | Ideally, experienced developers could continue improving this tool, such as enabling it to monitor Windows File Explorer's navigation behavior in the background without requiring manual navigation within the tool's interface. It would be great to add a small floating window that can be toggled on or off by the user, expanding into the main window to display the recorded paths when hovered over.
+- 未来我也许会继续开发和完善此工具，比如让它能够直接监控 Windows 资源管理器的导航行为，无需在其界面主动导航而是后台运行持续提供记录服务。还可以增加一个小的悬浮窗，是否开启交由用户选择，鼠标悬停在浮窗上时展开主窗口呈现路径记录供用户选择。 | I might continue developing and improving this tool in the future, such as enabling it to monitor Windows File Explorer's navigation behavior in the background without requiring manual navigation within the tool's interface. It would be great to add a small floating window that can be toggled on or off by the user, expanding into the main window to display the recorded paths when hovered over.
 
 ## 一些废话 | A Few Notes
 - 这个工具目前最大的缺点是，用户只能主动通过它提供的导航方式实现路径记录，并没有与 Windows 资源管理器实现良好的融合。用户目前只能改变一些使用习惯，比如将它设置随系统自启动，然后尝试将它作为最主要的文件导航方式使用。 | The biggest drawback of this tool is that it currently relies on users actively navigating through its interface to record paths, as it isn't seamlessly integrated with Windows File Explorer. Users will need to adjust their habits, perhaps setting the tool to launch on system startup and using it as their primary method for file navigation.
