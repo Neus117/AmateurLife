@@ -50,7 +50,7 @@ The path logger (Logger) on the right supports:
 
 <br><br>
 
-## 使用说明 | How to Use
+## :bulb: 使用说明 | How to Use
 1.在 Releases 中下载并运行 `File Tracker.exe` 即可使用。
 
 2.程序运行后会在 "C:\Users\Currentuser" 下释放一个数据库文件(1.0+ 版本文件名为 file_access.db，1.1+ 版本文件名为 file_tracker.db)，用于储存路径信息。
