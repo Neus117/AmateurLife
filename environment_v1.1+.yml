@@ -1,0 +1,12 @@
+name: ft_env
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - defaults
+dependencies:
+  - python=3.11.9
+  - pip=24.2
+  - pip:
+    - wxpython==4.2.2
+    - pyinstaller==6.10.0
+    - pywin32==306
