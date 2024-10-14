@@ -1,4 +1,4 @@
-﻿# File Tracker
+﻿# :star: File Tracker
 一个自动跟踪文件路径并根据使用频率和时间排序的工具
 
 File Tracker_v1.1.0 堂堂发布！！！更小的体积，更快的响应速度，更方便的功能实现！！！
@@ -103,5 +103,7 @@ The path logger (Logger) on the right supports:
 
 ## 开发者贡献 | Developer Contributions
 欢迎提交 issue 或 pull request！
+
+<br>
 
 You are welcome to submit issues or pull requests!
