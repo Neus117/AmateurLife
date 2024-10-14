@@ -48,6 +48,8 @@ The path logger (Logger) on the right supports:
 - Individual or bulk deletion of paths
 - Pinning and unpinning of the user interface elements
 
+<br><br>
+
 ## 使用说明 | How to Use
 1.在 Releases 中下载并运行 `File Tracker.exe` 即可使用。
 
@@ -67,12 +69,16 @@ The path logger (Logger) on the right supports:
 
 4.To uninstall: Simply delete File Tracker.exe and file_tracker.db (or file_access.db).
 
+<br><br>
+
 ## 依赖 | Dependencies
 - Python 3.11
 - 1.0+ 版本依赖 PyQt5，1.1+ 版本依赖 wxPython。其他依赖请参考 `requirements.txt` 或 `environment.yml`
 
 - Python 3.11
 - Version 1.0+ depends on PyQt5, and version 1.1+ depends on wxPython. For other dependencies, please refer to `requirements.txt` or `environment.yml`.
+
+<br><br>
 
 ## 开发者安装 | Developer Installation
 1. 克隆此仓库 | Clone this repository
@@ -83,11 +89,15 @@ The path logger (Logger) on the right supports:
    conda env create -f environment.yml
    conda activate ft_env
 
+<br><br>
+
 ## 开发者调试 | Developer Debugging
 - 运行 file_tracker.py 启动应用 | Run file_tracker.py to start the application
   ```bash
   python src/file_tracker.py
 - 接下来请开始您的自定义。 | From here, feel free to customize it as you like.
+
+<br><br>
 
 ## 开发者贡献 | Developer Contributions
 欢迎提交 issue 或 pull request！
