@@ -75,6 +75,8 @@ The path logger (Logger) on the right supports:
 - Python 3.11
 - 1.0+ 版本依赖 PyQt5，1.1+ 版本依赖 wxPython。其他依赖请参考 `requirements.txt` 或 `environment.yml`
 
+<br>
+
 - Python 3.11
 - Version 1.0+ depends on PyQt5, and version 1.1+ depends on wxPython. For other dependencies, please refer to `requirements.txt` or `environment.yml`.
 
