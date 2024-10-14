@@ -5,7 +5,11 @@ File Tracker_v1.1.0 堂堂发布！！！更小的体积，更快的响应速度
 
 A tool for automatically tracking file paths and sorting them by usage frequency and time.
 
-File Tracker_v1.1.0 Grand Release!!! Smaller size, faster response time, and more convenient functionality!!!
+<br>
+
+File Tracker_v1.1.0 Grand Release!!! 
+
+Smaller size, faster response time, and more convenient functionality!!!
 
 <div align="center">
 
@@ -29,6 +33,7 @@ File Tracker_v1.1.0 Grand Release!!! Smaller size, faster response time, and mor
 - 路径的单独或全量删除
 - 置顶和取消置顶用户图形界面
 
+<br>
 
 The file selector (Browser) on the left supports:
 - Tree-view navigation
@@ -54,6 +59,7 @@ The path logger (Logger) on the right supports:
 
 4.如何卸载：直接删除 File Tracker.exe 和 file_tracker.db(或 file_access.db)。
 
+<br>
 
 1.Download and run `File Tracker.exe` from the Releases section to start using the program.
 
